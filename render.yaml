@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: smart-resume-api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+services:
+  - type: web
+    name: your-flask-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"

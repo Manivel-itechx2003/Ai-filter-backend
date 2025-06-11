@@ -1,0 +1,4 @@
+mkdir server
+cd server
+python -m venv venv
+source venv/bin/activate  # on Windows: venv\Scripts\activate
